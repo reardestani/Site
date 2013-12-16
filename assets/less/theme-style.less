@@ -1,0 +1,164 @@
+/*!
+ * Bootstrapee by @reardestani - All Right Reserved
+ * Framework: http://getbootstrap.com
+ */
+
+// Load core variables and mixins
+// --------------------------------------------------
+
+@import "variables.less";
+@import "variables-custom.less";
+@import "mixins.less";
+
+// Global
+// --------------------------------------------------
+body {
+  color: #838383;
+  font-family: lato;
+  line-height: 1.7;
+  font-weight: 400;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: @font-family;
+}
+
+.smaller-text {
+  font-size: 12px;
+}
+
+a {
+  color: #BBBBBB;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    color: darken(#DBDBDB, 20%);
+  }
+}
+
+// Layout
+// --------------------------------------------------
+.container {
+  max-width: 970px;
+}
+
+// Header
+// --------------------------------------------------
+header {
+  background-color: #362f2d;
+  height: 90px;
+  margin-bottom: 50px;
+}
+
+.site-title {
+  float: left;
+  margin-right: 30px;
+  margin-top: -30px;
+  position: absolute;
+  .transition(all .1s);
+
+  &:hover,
+  &:focus {
+    margin-top: -20px;
+  }
+}
+
+.site-description {
+  color: #fff;
+  font-size: 18px;
+  line-height: 87px;
+  display: inline;
+  margin-left: 200px;
+}
+
+.social-icons {
+  float: right;
+  margin-top: 33px;
+
+  a {
+    color: #FFF;
+    font-size: 22px;
+  }
+}
+
+// Content
+// --------------------------------------------------
+.inner-content {
+  margin-bottom: 70px;
+}
+
+.title {
+  color: #362f2d;
+  font-size: 24px;
+}
+
+.item-list {
+  margin-top: 20px;
+
+  li {
+    margin-bottom: 10px;
+
+    a {
+      border: 1px solid #ECECEC;
+      border-radius: 3px;
+      padding: 30px;
+      display: block;
+      position: relative;
+      overflow: hidden;
+
+        span.right {
+          position: absolute;
+          right: 24px;
+          font-size: 80px;
+          top: -33%;
+          color: #F5F5F5;
+        }
+
+      &:hover,
+      &:focus {
+        span.right {
+          color: #362F2D;
+        }
+
+        color: #362F2D;
+      }
+
+      &.item-alt-style {
+        background-color: #362f2d;
+        .transition(all .2s);
+
+        &:hover,
+        &:focus {
+          background-color: darken(#362f2d, 10%);
+          color: #fff;
+        }
+
+      }
+
+    } // a
+
+  } // li
+
+  &.blog-list {
+    span.right {
+      top: 8%;
+      font-weight: 100;
+      font-family: @font-family;
+    }
+  } // blog-list
+
+} // item-list
+
+// Blog
+// --------------------------------------------------
+.blog {
+
+}
+
+// Footer
+// --------------------------------------------------
+.site-footer {
+  background-color: #362f2d;
+  padding: 22px 0 5px; 
+}

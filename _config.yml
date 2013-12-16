@@ -1,0 +1,22 @@
+# Dependencies
+markdown: rdiscount
+
+# Permalinks
+permalink: pretty
+
+# Url
+baseurl: "http://reardestani.ir"
+
+# Pagination
+paginate: 10
+paginate_path: "blog/page:num"
+
+# Bloginfo
+name: "Reardestani"
+description: "I am Reza Ardestani, a web designer and developer."
+version: "0.0.0"
+
+# Custom variables
+jquery_url: "https://code.jquery.com/jquery-1.10.2.min.js"
+bootstrap_css_url: "//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css"
+bootstrap_js_url: "//netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"
