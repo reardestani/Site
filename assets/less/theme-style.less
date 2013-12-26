@@ -13,68 +13,132 @@
 // Global
 // --------------------------------------------------
 body {
-  //color: #838383;
-  font-family: lato;
+  font-family: @body-font-family;
   line-height: 1.7;
   font-weight: 400;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: @font-family;
+  font-family: @heading-font-family;
+}
+
+a {
+  color: @link-color;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    color: darken(@link-color, 20%);
+  }
+}
+
+.inner-content.blog {
+  a {
+    color: @orange;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+      color: darken(@orange, 20%);
+    }
+  }
 }
 
 .smaller-text {
   font-size: 12px;
 }
 
-a {
-  color: #BBBBBB;
+.uppercase {
+  text-transform: uppercase;
+}
 
-  &:hover,
-  &:focus {
-    text-decoration: none;
-    color: darken(#DBDBDB, 20%);
-  }
+.gray-color {
+  color: lighten(#333, 50%);
 }
 
 // Layout
 // --------------------------------------------------
 .container {
   max-width: 970px;
+  position: relative;
+}
+
+// Notification
+// --------------------------------------------------
+.notification {
+  background-color: @notification-bg-color;
+  padding: 20px 0;
+  color: #FFF;
+  position: relative;
+  z-index: @zindex-tooltip;
+
+  .offer-code {
+    background-color: darken(@notification-bg-color, 5%);
+    padding: 5px 7px 7px;
+    border-radius: 3px;
+  }
 }
 
 // Header
 // --------------------------------------------------
 header {
-  background-color: #362f2d;
-  height: 90px;
+  background-color: @dark-bg-color;
+  min-height: 90px;
   margin-bottom: 50px;
 }
 
 .site-title {
-  float: left;
   margin-right: 30px;
-  margin-top: -30px;
+  margin-top: -80px;
   position: absolute;
   .transition(all .1s);
+  z-index: @zindex-navbar;
+
+  @media (max-width: 992px) {
+    right: 50%;
+    margin-right: -50px;
+    margin-top: -50px;
+
+    img {
+      max-width: 100px;
+    }
+  }
 
   &:hover,
   &:focus {
-    margin-top: -20px;
+    margin-top: 0px;
   }
 }
 
 .site-description {
-  color: #fff;
+  color: #FFF;
   font-size: 18px;
-  line-height: 87px;
-  display: inline;
-  margin-left: 200px;
+  display: inline-block;
+  margin-left: 195px;
+  padding-top: 30px;
+  line-height: 1.4;
+
+  @media (max-width: 992px) {
+    display: block;
+    text-align: center;
+    margin: 0;
+    padding-top: 70px;
+  }
 }
 
 .social-icons {
-  float: right;
-  margin-top: 30px;
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  top: 47px;
+
+  @media (max-width: 992px) {
+    text-align: center;
+    position: static;
+    display: block;
+    padding: 15px;
+    margin-bottom: -2px;
+  }
 
   a {
     color: #FFF;
@@ -89,7 +153,7 @@ header {
 }
 
 .title {
-  color: #362f2d;
+  color: @dark-bg-color;
   font-size: 24px;
 }
 
@@ -113,24 +177,28 @@ header {
           font-size: 80px;
           top: -42%;
           color: #F5F5F5;
+
+          @media (max-width: 768px) {
+            display: none;
+          }
         }
 
       &:hover,
       &:focus {
         span.right {
-          color: #362F2D;
+          color: @dark-bg-color;
         }
 
-        color: #362F2D;
+        color: @dark-bg-color;
       }
 
       &.item-alt-style {
-        background-color: #362f2d;
+        background-color: @dark-bg-color;
         .transition(all .2s);
 
         &:hover,
         &:focus {
-          background-color: darken(#362f2d, 10%);
+          background-color: darken(@dark-bg-color, 10%);
           color: #fff;
         }
 
@@ -144,24 +212,68 @@ header {
     span.right {
       top: 8%;
       font-weight: 100;
-      font-family: @font-family;
+      font-family: @heading-font-family;
     }
   } // blog-list
 
 } // item-list
 
+// Blog
+// --------------------------------------------------
+.post-header {
+  margin-top: -20px;
+}
+
+.post-meta {
+  margin: 10px 0 0 0;
+}
+
 // Subscription
 // --------------------------------------------------
-.subscription {
+.subscription-form {
+  position: relative;
+}
+
+.mc-input {
+  height: 72px;
   border-radius: 3px;
-  padding: 50px 100px;
-  background-color: #F8F8F8;
-  text-align: center;
+  padding-left: 25px; 
+  .box-shadow( 0 0 0 );
+  border: 2px solid @orange;
+
+  &:focus {
+    .box-shadow( 0 0 0 );
+    border-color: @orange;
+  }
+}
+
+.btn-subscribe {
+  position: absolute;
+  top: 7px;
+  padding: 18px 56px;
+  right: 0;
+  .border-right-radius(0);
+  background-color: @orange;
+  color: #FFF;
+  border-color: @orange;
+  border-radius: 2px;
+
+  @media(max-width:480px) {
+    padding: 18px 16px;
+  }
+
+  &:hover,
+  &:focus {
+    color: #fff;
+    background-color: @orange;
+    border-color: @orange;
+  }
 }
 
 // Footer
 // --------------------------------------------------
 .site-footer {
-  background-color: #362f2d;
+  background-color: @dark-bg-color;
   padding: 22px 0 5px; 
+  color: #838383;
 }

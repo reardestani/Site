@@ -10,12 +10,15 @@
 
 		<section id="content" class="content">
 			<div class="container blog clearfix">
-				<div class="inner-content">
-					<h1 class="title text-right">{% include page-title.html %}</h1>
+				<div class="inner-content blog">
+					<div class="post-header clearfix">
+						<h1 class="post-title title">{% include page-title.html %}</h1>
+						<p class="post-meta">{{ page.date | date_to_string }} <sapn class="uppercase smaller-text gray-color">&nbsp; under &nbsp;</sapn> {{ page.tags }}</p>
+		      </div> <!-- /.post-header -->
 					<hr>
-
 					{{ content }}
-
+					<br>
+					{% include subscription.html %}
 					<hr>
 					<div id="disqus_thread"></div>
 

@@ -17,10 +17,12 @@
 	{% endif %} 
 </title>
 
-<!-- Bootstrap core CSS -->
-<link href="{{ site.bootstrap_css_url }}" rel="stylesheet">
+<!-- RSS Feed-->
+<link rel="alternate" type="application/rss+xml" title="{{ site.name }}" href="{{ site.baseurl }}/feed.xml">
 
-<!-- Bootstrapee extras -->
+<!-- Stylesheets -->
+<link href="{{ site.bootstrap_css_url }}" rel="stylesheet">
+<link href="{{ site.fontawesome_css_url }}" rel="stylesheet">
 <link href="{{ site.baseurl }}/assets/css/theme-style.css" rel="stylesheet">
 
 <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
