@@ -1,0 +1,36 @@
+<meta charset="utf-8">
+<meta name="keywords" content="HTML5, CSS3, jQuery, PHP, tips, web reources, tutorial, tricks">
+<meta name="description" content="	
+	{% if page.title == 'Reardestani' %}
+		{{ site.name }} &middot; {{ site.description }}
+	{% else %}
+		{{ page.title }} &middot; Reardestani
+	{% endif %} 
+">
+<meta name="author" content="">
+
+<title>
+	{% if page.title == "Reardestani" %}
+		{{ site.name }} &middot; {{ site.description }}
+	{% else %}
+		{{ page.title }} &middot; Reardestani
+	{% endif %} 
+</title>
+
+<!-- RSS Feed-->
+<link rel="alternate" type="application/rss+xml" title="{{ site.name }}" href="{{ site.baseurl }}/feed.xml">
+
+<!-- Stylesheets -->
+<link href="{{ site.bootstrap_css_url }}" rel="stylesheet">
+<link href="{{ site.fontawesome_css_url }}" rel="stylesheet">
+<link href="{{ site.baseurl }}/assets/css/theme-style.css" rel="stylesheet">
+
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+<![endif]-->
+
+<!-- Favicons -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ site.baseurl }}/assets/ico/apple-touch-icon-144-precomposed.png">
+<link rel="shortcut icon" href="{{ site.baseurl }}/assets/ico/favicon.png">

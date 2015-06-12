@@ -1,0 +1,52 @@
+---
+layout: home
+title: Reardestani
+head-slug: I am Reza Ardestani, a web designer and developer
+---
+
+{% include main-nav.html %} 
+
+<section id="content" class="content">
+
+	<div class="container">
+		<div class="inner-content">
+			<h2 class="title text-right">Founded Projects</h2>
+			<p class="text-right">Founding new projects is really fun and brings about numerous new experiences.</p>
+
+			<ul class="list-unstyled item-list">
+				<li><a href="http://bootstrapee.com" target="_blank"><strong>Bootstrapee</strong> - Free, Sleek, High Quality and Developer Friendly Web Resources <span class="right">&#8605;</span></a></li>
+				<li class="hidden"><a href="http://kickyghost.com" target="_blank"><strong>KickyGhost</strong> - Free and Premium Ghost Themes and Plugins for a Low Subscription <span class="right">&#8605;</span></a></li>
+				<li class="hidden"><a href="http://codblocks.com" target="_blank"><strong>CodBlocks</strong> - Premium Collection of Code Resources for a Low Subscription <span class="right">&#8605;</span></a></li>
+				<li><a href="http://themefeather.com" target="_blank"><strong>ThemeFeather</strong> - Premium HTML5 and CSS3  Template, WordPress, Tumblr, Ghost Themes <span class="right">&#8605;</span></a></li>
+				<li class="hidden"><a href="http://jekylltheme.com" target="_blank"><strong>JekyllTheme</strong> - Free and Premium Jekyll Themes <span class="right">&#8605;</span></a></li>
+			</ul>
+		</div><!-- /.inner-content -->
+		
+		<div class="inner-content">
+			<h2 class="title text-right">Recent from Blog</h2>
+			<p class="text-right">Sometimes I feel like William Shakespeare, so I write some lines (LOL). Try it sometimes, it's fun.</p>
+
+			<ul class="list-unstyled item-list blog-list">
+				{%	for post in site.posts limit:3 %}
+					{% if post.disable == false %}
+						{% if post.homepage == true %}
+							<li><a href="{{ post.url }}">{{ post.title }} - <span class="smaller-text">{{ post.date | date_to_string }}</span><span class="right">Read More</span></a></li>
+						{% endif %}
+					{% endif %}
+				{% endfor %}
+				<li><a href="{{ site.baseurl }}/blog" class="item-alt-style text-center">View All Post</a></li>
+			</ul> <!-- /.item-list -->
+
+		</div><!-- /.inner-content -->
+
+		<div class="inner-content">
+			<h2 class="title text-right">Work with Me</h2>
+			<p class="text-right">Do you have an interesting idea, want to make it happen, you can contact me.</p>
+
+			<ul class="list-unstyled item-list">
+				<li><a href="mailto:hi@reardestani.ir" class="item-alt-style text-center">Feel Free to Contact Me</a></li>
+			</ul>
+		</div><!-- /.inner-content -->
+	</div> <!-- /.container -->
+
+</section>
