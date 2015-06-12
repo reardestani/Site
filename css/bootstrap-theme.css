@@ -1,0 +1,195 @@
+/*!
+ * reardestani (http://reardestani.ir)
+ * Copyright reardestani
+ */
+
+/* Global */
+  body {
+    color: #333;
+  }
+
+  a {
+    color: #333;
+  }
+
+  a:hover,
+  a:focus {
+    color: #333;
+    text-decoration: none;
+  }
+
+  .row {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .col-remove-padding {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+/* Header */
+  header {
+    padding: 30px 0 30px 0;
+  }
+
+  .full-name {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 0;
+    font-family: monospace;
+    word-spacing: -3px;
+    letter-spacing: -1px;
+  }
+
+  .description {
+    color: #9B9B9B;
+    font-size: 18px;
+    font-weight: normal;
+    margin-top: 20px;
+  }
+
+  .username {
+    color: #9B9B9B;
+    font-size: 18px;
+    font-weight: normal;
+    margin-top: 0; 
+  }
+
+/* Main */
+  section {
+    padding-bottom: 30px;
+  }
+
+  h4 {
+    margin-top: 0;
+    margin-bottom: 30px
+  }
+
+  h4 small {
+    margin-top: 4px;
+  }
+
+  .thumbnail {
+    position: relative;
+    background-color: #763BC1;
+    text-align: center;
+    font-size: 18px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    color: #FFF;
+    border-width: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+  }
+
+  .thumbnail:hover,
+  .thumbnail:focus {
+    text-decoration: none;
+    color: #FFF;
+    box-shadow: 0 0 0 5px #763BC1;
+    z-index: 1;
+  }
+
+  .snippet-lovers {
+    background-color: #4675DA;
+  } 
+
+  .snippet-lovers:hover,
+  .snippet-lovers:focus {
+    box-shadow: 0 0 0 5px #4675DA;
+  }
+
+  .essential-ui {
+    background-color: #52D39D;
+  }
+
+  .essential-ui:hover,
+  .essential-ui:focus {
+    box-shadow: 0 0 0 5px #52D39D;
+  }
+
+  .theme-hub {
+    background-color: #EC5E5E;
+  }
+
+  .theme-hub:hover,
+  .theme-hub:focus {
+    box-shadow: 0 0 0 5px #EC5E5E;
+  }
+  
+  /* Drop me a line */
+  .drop-btn {
+    position: relative;
+    text-align: center;
+    background-color: red;
+    display: block;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    color: #FFF;
+  }
+
+  .drop-btn:hover,
+  .drop-btn:focus {
+    color: #FFF;
+    z-index: 1;
+  }
+  
+  .drop-btn.email {
+    background-color: #36CAA8;
+  }
+
+  .drop-btn.email:hover,
+  .drop-btn.email:focus {
+    box-shadow: 0 0 0 3px #36CAA8;
+  }
+
+  .drop-btn.github {
+    background-color: #333;
+  }
+
+  .drop-btn.github:hover,
+  .drop-btn.github:focus {
+    box-shadow: 0 0 0 3px #333;
+  }
+
+  .drop-btn.twitter {
+    background-color: #55acee;
+  }
+
+  .drop-btn.twitter:hover,
+  .drop-btn.twitter:focus {
+    box-shadow: 0 0 0 3px #55acee;
+  }
+
+  .drop-btn.facebook {
+    background-color: #3b5998;
+  }
+
+  .drop-btn.facebook:hover,
+  .drop-btn.facebook:focus {
+    box-shadow: 0 0 0 3px #3b5998;
+  }
+  
+  .drop-btn.pinterest {
+    background-color: #cc2127;
+  }
+
+  .drop-btn.pinterest:hover,
+  .drop-btn.pinterest:focus {
+    box-shadow: 0 0 0 3px #cc2127;
+  }
+
+  .drop-btn.google-plus {
+    background-color: #dd4b39;
+  }
+
+  .drop-btn.google-plus:hover,
+  .drop-btn.google-plus:focus {
+    box-shadow: 0 0 0 3px #dd4b39;
+  }
+
+
+
+
+
